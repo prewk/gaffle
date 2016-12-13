@@ -1,0 +1,32 @@
+{
+  "name": "gaffle",
+  "version": "0.0.1",
+  "description": "Run many commands based on arguments to one npm script",
+  "main": "lib/index.js",
+  "bin": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "flow": "flow check",
+    "build": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prewk/gaffle.git"
+  },
+  "author": "Oskar Thornblad <oskar.thornblad@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prewk/gaffle/issues"
+  },
+  "homepage": "https://github.com/prewk/gaffle",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "find-package-json": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "flow-bin": "^0.37.0",
+    "jest": "^17.0.3"
+  }
+}

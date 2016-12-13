@@ -1,0 +1,10 @@
+[ignore]
+.*/node_modules/find-package-json/.*
+
+[include]
+src/**/*.js
+
+[libs]
+decls/
+
+[options]
