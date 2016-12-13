@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const finder = require('find-package-json');
 const parse = require('./parse');
 const help = require('./help');
