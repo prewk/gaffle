@@ -2,12 +2,13 @@
   "name": "gaffle",
   "version": "0.0.2",
   "description": "Run many commands based on arguments to one npm script",
-  "main": "lib/index.js",
-  "bin": "lib/index.js",
+  "main": "lib/cli.js",
+  "bin": "lib/cli.js",
   "scripts": {
     "test": "jest",
     "flow": "flow check",
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "flow-watch": "watch 'flow check' src decls"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
     "flow-bin": "^0.37.0",
-    "jest": "^17.0.3"
+    "jest": "^17.0.3",
+    "watch": "^1.0.1"
   }
 }
