@@ -8,7 +8,8 @@
     "test": "jest",
     "flow": "flow check",
     "build": "babel src --out-dir lib",
-    "flow-watch": "watch 'flow check' src decls"
+    "flow-watch": "watch 'flow check' src decls",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
