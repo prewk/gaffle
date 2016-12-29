@@ -1,19 +1,5 @@
 const colors = require('colors/safe');;
-
-/**
- * Left pad
- */
-function pad(to: number, str: string): string {
-    if (to <= str.length) {
-        return str;
-    }
-
-    for (let i = 0; i < to - str.length; i++) {
-        str += ' ';
-    }
-
-    return str;
-}
+const pad = require('./pad');
 
 /**
  * Create help

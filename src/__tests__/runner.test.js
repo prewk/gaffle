@@ -24,7 +24,7 @@ describe('Command runner', () => {
         );
 
         expect(ranCmd).toBe('foo');
-        expect(ranOpt).toEqual({ env: {} });
+        expect(ranOpt).toEqual({ env: {}, shell: true, stdio: 'inherit' } );
     });
 
     it('should replace the params', () => {
@@ -70,6 +70,6 @@ describe('Command runner', () => {
             'EXTRA'
         );
 
-        expect(ranOpt).toEqual({ env: { PATH: '/bin:EXTRA' } });
+        expect(ranOpt).toEqual({ env: { PATH: '/bin:EXTRA' }, shell: true, stdio: 'inherit' });
     });
 });
