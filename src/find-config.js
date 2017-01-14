@@ -8,7 +8,7 @@ module.exports = function findConfig(): null | Gaffle$Config {
     // Load .gafflerc
     const rc = findUp('.gafflerc');
     if (rc) {
-        return json5.parse(fs.readFileSync(rc, 'utf8'));
+        return json5.parse.sync(fs.readFileSync(rc, 'utf8'));
     }
 
     // Load package.json.gaffle
