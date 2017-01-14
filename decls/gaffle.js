@@ -1,31 +1,31 @@
 // @flow
 
-export type Gaffle$RawConfig = {
+declare type Gaffle$RawConfig = {
     [key: string]: string | { env: ?{ [key: string]: string }, cmd: ?string, desc: ?string };
 };
 
-export type Gaffle$CmdConfig = {
+declare type Gaffle$CmdConfig = {
     cmd: string;
     env: { [key: string]: string };
     desc: string;
 };
 
-export type Gaffle$Config = {
+declare type Gaffle$Config = {
     [key: string]: Gaffle$CmdConfig;
 };
 
-type Gaffle$ExecOpts = {
+declare type Gaffle$ExecOpts = {
     env: { [key: string]: string },
 };
 
-type Gaffle$ExecObj = {
+declare type Gaffle$ExecObj = {
     stdout: { pipe: Function },
     stderr: { pipe: Function },
 };
 
-type Gaffle$Exec = (string, opt: Gaffle$ExecOpts) => Gaffle$ExecObj;
+declare type Gaffle$Exec = (string, opt: Gaffle$ExecOpts) => Gaffle$ExecObj;
 
-type Gaffle$ProcessObj = {
+declare type Gaffle$ProcessObj = {
     env: { [key: string]: string },
     stdout: Object,
     stderr: Object,

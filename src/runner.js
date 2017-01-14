@@ -27,6 +27,7 @@ module.exports = function runner(
     // Run
     const executive = exec(cmd, Object.assign({
         // Inherit colors correctly
+        env: {},
         shell: true,
         stdio: 'inherit',
     }, { env: Object.assign({}, config.env, processEnv) }));
