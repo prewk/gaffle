@@ -28,6 +28,31 @@ Usage: `npm test jest` / `npm test jest watch` / `npm test flow`.
 
 For organizing advanced scripts in `package.json` into simpler commands, and being able to run them via special commands such as `npm test` that suppresses some annoying output.
 
+## .gafflerc
+
+You can put your gaffle config in a `.gafflerc` file instead of `package.json`.
+
+```json
+{
+  "scripts": {
+    "test": "gaffle"
+  }
+}
+```
+
+```js
+// .gafflerc is a JSON5 file (supports comments and stuff)
+{
+    "jest": {
+      "cmd": "jest $0", "env": { "NODE_ENV": "test" }
+    },
+    "jest": {
+      "cmd": "jest --watch", "env": { "NODE_ENV": "test" }
+    },
+    "flow": "flow check $0",
+}
+```
+
 ## Config schema
 
 ```json
