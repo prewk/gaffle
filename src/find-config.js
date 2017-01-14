@@ -3,7 +3,7 @@ const findUp = require('find-up');
 const finder = require('find-package-json');
 const json5 = require('json5');
 
-module.exports = findConfig(): null | Gaffle$Config {
+module.exports = function findConfig(): null | Gaffle$Config {
     // Load .gafflerc
     const path = findUp('.gafflerc');
     if (path) {
